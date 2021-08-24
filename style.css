@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin-top: 0rem;
+    font-weight: 600;
+}
+.parent-container{
+    /*display: flex;
+    flex-direction: column;*/
+    width: 100%;
+    margin-top: 0rem;
+    text-align: center;
+    max-width: 500px;
+    min-height: 200px;
+    margin: auto;
+    background-color:#e99cac;
+}
+
+.input-style>input{
+    width: 90%;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.button-style>button{
+    width: 5rem;
+    height: 2rem;
+   
+    margin-bottom: 1rem;
+}
+
+
+
+table,th,td{
+    border: 1px solid black;
+   border-collapse: collapse;
+   padding: 6px;
+   background-color: white;
+  
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    
+}
+
+#cash-input{
+    display: none;
+    
+}
+
+#return-change{
+    display: none;
+}
