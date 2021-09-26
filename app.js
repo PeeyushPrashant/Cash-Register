@@ -33,20 +33,25 @@ checkBtn.addEventListener("click", function cashHandler(){
     hideTable();
     let billAmountValue = Number(billAmount.value);
     let cashGivenValue = Number(cashGiven.value);
-    if(cashGivenValue < billAmountValue)
+    if(billAmountValue>0 && cashGivenValue>0)
     {
-        showErrorMsg("Cash should be more than bill amount");
+        if(cashGivenValue < billAmountValue)
+        {
+            showErrorMsg("Cash should be more than bill amount");
+        }
+        else if(cashGiven.value===billAmount.value)
+        {
+            showErrorMsg("No amount is to be returned");
+        }
+            
+        else {
+            const amountToBeReturned=cashGivenValue -billAmountValue;
+            calculateAmount(amountToBeReturned);
+            
+        }
     }
-    else if(cashGiven.value===billAmount.value)
-    {
-        showErrorMsg("No amount is to be returned");
-    }
-        
-    else {
-        const amountToBeReturned=cashGivenValue -billAmountValue;
-        calculateAmount(amountToBeReturned);
-        
-    }
+    else
+       showErrorMsg("Enter valid bill amount and cash given to continue");
         
 })
 
